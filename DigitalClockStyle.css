@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+/*
+ Project Name: Digital Clock
+ Date: 01/07/2020
+ Author: Arafat Hossain
+*/
+
+
+body{
+    margin: auto;
+}
+
+.main{
+    max-width: 400px;
+    background-color: black;
+    margin: 0 auto;
+    text-align: center;
+    height: 500px;
+}
+
+.timeclass{
+     padding: 10px;
+     margin: auto;
+     color: #00ff00;
+     background-color: black;
+     font-weight: 100;
+     font-family: Orbitron;
+     top: 20%;
+     width: 380px;
+     position: absolute;
+    
+    
+}
+b{
+    font-size: 70px;
+}
+i{
+    font-size: 20px;
+    margin-left: 20px;
+    font-style: normal;
+    
+
+}
+u{
+    text-decoration: none;
+    font-size: 20px;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -30px;
+
+}
+strong{
+    font-size: 25px;
+    font-weight: 100;
+
+}
+big{
+    font-size: 25px;
+}
