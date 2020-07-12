@@ -1,13 +1,14 @@
 function clock(){
     //New date
     var time = new Date();
+    
     //Get times from date
     var hours = time.getHours();
     var minutes = time.getMinutes();
     var seconds = time.getSeconds();
     var type = "AM";
     
-    //Conver to 12
+    //Convert to 12
     if( hours == 0){
         hours =12;
     }
@@ -20,57 +21,18 @@ function clock(){
     minutes = (minutes < 10)? "0" + minutes : minutes;
     seconds = (seconds < 10)? "0" + seconds : seconds;
     
-    //Get name day
-    var day = time.getDay();
-    
-    //Convert to days name;
-    if( day == 1){
-        day = "Monday";
-    }else if(day == 2){
-        day = "Tuesday";
-    }else if(day == 3){
-        day = "Wednesday";
-    }else if(day == 4){
-        day = "Thursday";
-    }else if(day == 5){
-        day = "Friday";
-    }else if(day == 6){
-        day = "Saturday";
-    }else if(day == 7){
-        day = "Sunday";
-    }
+    var dayname = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    var day = dayname[time.getDay()];
     
     //Get date
     var date = time.getDate();
-    var month = time.getMonth();
     
     //Get month name
-    if(month == 0){
-        month = "January";
-    }else if(month == 1){
-        month = "February";
-    }else if(month == 2){
-        month = "March";
-    }else if(month == 3){
-        month = "April";
-    }else if(month == 4){
-        month = "May";
-    }else if(month == 5){
-        month = "June";
-    }else if(month == 6){
-        month = "July";
-    }else if(month == 7){
-        month = "August";
-    }else if(month == 8){
-        month = "September";
-    }else if(month == 9){
-        month = "October";
-    }else if(month == 10){
-        month = "November";
-    }else if(month == 11){
-        month = "December";
-    }
+    var monthname = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var month = monthname[time.getMonth()];
     var year = time.getFullYear();
+    
     //Add everything to a var
     var time = "<strong>" + day.toUpperCase() + "</strong>" +"<br>" + "<b>" + hours + ":" + minutes +  "</b>" + "<i>" + seconds + "</i>" + "<u>" + type + "</u>" + "<br>" + "<big>" + date + " " + month.toUpperCase() + " " + year + "</big>";
     
